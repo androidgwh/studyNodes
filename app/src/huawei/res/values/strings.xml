@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">华为</string>
+    <string name="init_clazz">com.gwh.studyplan.PushHuaweiInit</string>
 </resources>

@@ -20,15 +20,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    def flavor = "flavor"
-    flavorDimensions flavor
+    flavorDimensions 'client'
     productFlavors{
         xiaomi{
-            dimension flavor
+            dimension 'client'
             applicationId 'com.gwh.studyplan.xiaomi'
         }
         huawei{
-            dimension flavor
+            dimension 'client'
             applicationId 'com.gwh.studyplan.huawei'
         }
     }
@@ -36,8 +35,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-
+/**
+ * 设置默认的src路径
+ */
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java','src/xiaomi/java']
+//            res.srcDirs=['src/main/res','src/huawei/res','src/xiaomi/res']
+        }
+    }
 }
 task printProperties(){
     doLast {
@@ -45,6 +51,29 @@ task printProperties(){
         println "password=$pass"
     }
 }
+/**
+ * 在doLash之前还是之后得事情都是在配置阶段执行，在doLash块中得代码在运行阶段执行
+ */
+task pringVariantNames(){
+    doLast{
+        android.applicationVariants.all{
+            variant->
+                println variant.name
+        }
+    }
+}
+/**
+ * 安装所有调试定制到同一设备
+ */
+//task installDebugFlavors(){
+//    android.applicationVariants.all{
+//        v->
+//            if(v.name.endsWith("Debug")){
+//                String name=v.name.capitalize()
+//                dependsOn "install$name"
+//            }
+//    }
+//}
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'

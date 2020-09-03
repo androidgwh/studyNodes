@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">小米</string>
+<!--    <string name="init_clazz">com.gwh.studyplan.PushXiaomiiInit</string>-->
 </resources>

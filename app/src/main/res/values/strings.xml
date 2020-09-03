@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">studyPlan</string>
+    <string name="init_clazz">com.gwh.studyplan.PushCommonInit</string>
 </resources>
