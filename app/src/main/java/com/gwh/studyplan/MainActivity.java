@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,CallActivity.class));
+                startActivity(new Intent(MainActivity.this,CameraActivity.class));
             }
         });
     }

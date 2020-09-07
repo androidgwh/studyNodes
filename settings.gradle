@@ -1,3 +1,5 @@
+include ':camera'
+include ':camera'
 include ':lib'
 include ':app'
 rootProject.name = "studyPlan"
