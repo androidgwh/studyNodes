@@ -4,5 +4,5 @@
 + ## depthFirst 深度优先算法
 + ## tree 树相关
 # camera 仿微信自定义相机，点击拍照，长按录制
-![image](https://github.com/androidgwh/studyNodes/blob/master1/images/Screenshot_20200907_172351_com.gwh.studyplan.huawei.jpg) 
+![image](https://github.com/androidgwh/studyNodes/blob/master1/images/20200907175257.png) 
 # app 多渠道包跳转不同页面配置(huawei、xiaomi)
