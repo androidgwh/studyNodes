@@ -1,4 +1,3 @@
-# studyNodes
 # lib：  java数据结构和算法学习
 + ## astar： A*算法
 + ## depthFirst： 深度优先算法
